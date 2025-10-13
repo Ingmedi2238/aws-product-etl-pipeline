@@ -1,0 +1,22 @@
+# Project Configuration
+project_name = "shop-etl"
+environment  = "dev"
+
+# AWS Configuration
+aws_region  = "eu-west-1"
+aws_profile = "your-aws-profile-cli"
+
+# S3 Configuration
+s3_bucket_name         = "shop-etl-de-101"
+athena_results_bucket  = "shop-etl-athena-results"
+
+# Lambda Configuration
+lambda_memory_size = 512
+lambda_timeout     = 300
+
+# Glue Configuration
+glue_database_name = "shop_products_db"
+glue_crawler_name  = "shop-products-crawler"
+
+# Athena Configuration
+athena_workgroup_name = "shop-etl-workgroup"
