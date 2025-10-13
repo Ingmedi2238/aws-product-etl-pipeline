@@ -169,7 +169,7 @@ cat output.json
 ```
 
 **Expected Output:**
-```json
+```py
 {
   statusCode: 200,
   body: {
