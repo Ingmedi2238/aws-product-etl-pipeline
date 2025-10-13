@@ -171,13 +171,13 @@ cat output.json
 **Expected Output:**
 ```json
 {
-  "statusCode": 200,
-  "body": "{
+  statusCode: 200,
+  body: {
     "message": "...successfully",
     "records_processed": 30,
     "s3_key": "products/year=.../month=.../day=.../products_....csv",
     "execution_time": "2025...T....748402"
-  }"
+  }
 }
 ```
 
